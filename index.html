@@ -100,3 +100,50 @@ a:hover {
 
 </body>
 </html>
+<style></style>/* --- Background gradient animatsiyasi --- */
+body {
+    background: linear-gradient(-45deg, #4b6cb7, #182848, #243b6b, #1c1c1c);
+    background-size: 400% 400%;
+    animation: gradientBG 15s ease infinite;
+}
+
+@keyframes gradientBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* --- Sarlavha typewriter effekt --- */
+h2 {
+    overflow: hidden; /* to prevent line wrap */
+    border-right: .15em solid orange;
+    white-space: nowrap;
+    margin: 0 auto;
+    letter-spacing: .1em;
+    animation: typing 2s steps(20, end), blink-caret .75s step-end infinite;
+}
+
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+}
+
+@keyframes blink-caret {
+    50% { border-color: transparent; }
+}
+
+/* --- Havolalarga hover glow effekt --- */
+a:hover {
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.6);
+}
+
+/* --- Link’lar fade + scale effektini yaxshilash --- */
+a {
+    transform: translateY(20px) scale(0.95);
+    opacity: 0;
+    animation: slideUpScale 0.6s forwards;
+}
+
+@keyframes slideUpScale {
+    to { opacity: 1; transform: translateY(0) scale(1); }
+}
