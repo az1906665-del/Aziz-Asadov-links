@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<style></style><!DOCTYPE html>
 <html lang="uz">
 <head>
 <meta charset="UTF-8">
@@ -6,6 +6,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <style>
+/* --- Body va qora fon --- */
 body {
     margin: 0;
     font-family: 'Arial', sans-serif;
@@ -18,7 +19,7 @@ body {
     color: #f4d27a;
 }
 
-/* Karta */
+/* --- Container --- */
 .container {
     background: rgba(255, 255, 255, 0.07);
     border-radius: 25px;
@@ -28,21 +29,21 @@ body {
     text-align: center;
     backdrop-filter: blur(10px);
     box-shadow: 0 0 25px rgba(255, 215, 0, 0.3);
-    animation: fadeIn 1s ease-in-out;
+    animation: fadeIn 1s ease-in-out, float 6s ease-in-out infinite;
 }
 
-/* Profil rasmi */
+/* --- Profil rasmi --- */
 img {
     width: 135px;
     height: 135px;
     border-radius: 50%;
     object-fit: cover;
-    border: 3px solid #f4d27a;  /* Tilla ramka */
+    border: 3px solid #f4d27a;
     margin-bottom: 18px;
     animation: popIn 0.6s ease-out;
 }
 
-/* Sarlavha */
+/* --- Sarlavha --- */
 h2 {
     margin-bottom: 20px;
     font-size: 26px;
@@ -50,11 +51,11 @@ h2 {
     animation: fadeIn 1.4s ease;
 }
 
-/* Havolalar */
+/* --- Havolalar --- */
 .link {
     display: block;
     background: rgba(255,255,255,0.08);
-    color: #f4d27a; /* Tilla matn */
+    color: #f4d27a;
     margin: 12px 0;
     padding: 14px;
     border-radius: 14px;
@@ -75,11 +76,42 @@ h2 {
 .link:nth-of-type(4) { animation-delay: 1.0s; }
 .link:nth-of-type(5) { animation-delay: 1.2s; }
 
+/* Hover effekti */
 .link:hover {
     background: rgba(255,215,0,0.2);
     transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(255, 215, 0, 0.6);
 }
 
-/* Animatsiyalar */
+/* --- Animatsiyalar --- */
 @keyframes fadeIn { from {opacity: 0;} to {opacity: 1;} }
-@keyframes popIn { from {transform: scale(0);} to {transform: scale(
+@keyframes popIn { from {transform: scale(0);} to {transform: scale(1);} }
+@keyframes slideUp { to {opacity: 1; transform: translateY(0);} }
+@keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+}
+</style>
+
+</head>
+<body>
+
+<div class="container">
+
+    <!-- Profil rasmi -->
+    <img src="https://i.postimg.cc/NjF4S52Y/IMG-20251129-161207-559.webp" alt="Profil rasmi">
+
+    <!-- Sarlavha -->
+    <h2>Aziz Asadov Links</h2>
+
+    <!-- Havolalar -->
+    <a class="link" href="https://t.me/arbitragefinder1" target="_blank">📈 Arbitrage Kanali</a>
+    <a class="link" href="https://t.me/azikkuuu" target="_blank">👤 Shaxsiy Telegram (@azikkuuu)</a>
+    <a class="link" href="https://t.me/Uzbekiston_elonlari_official" target="_blank">👥 Telegram Guruh</a>
+    <a class="link" href="https://t.me/top1secret_bot?start=REF5093707534509370" target="_blank">🔒 TOP 1% Secret — Ro‘yxatdan O‘tish</a>
+    <a class="link" href="tel:+998505033441">📞 +998 50 503 34 41</a>
+
+</div>
+
+</body>
+        </html>
